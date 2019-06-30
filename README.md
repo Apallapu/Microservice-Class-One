@@ -10,6 +10,8 @@ All the micro services are regiter into eureka server for communicating each oth
 
 Group id
 com.poc
+
+
 Artifact id
 eureka-server
 
@@ -23,8 +25,12 @@ click on genereate project
 
 after genereating the project import into eclipse;
 
+
+
 step2:
 Enable eureka server by adding below annotation in spring boot class level
+
+
 
 @EnableEurekaServer
 
@@ -44,6 +50,8 @@ Add below information in application.properties file
 
 By default all eureka server register all micro service it self.
 
+
+
 eureka.client.registerWithEureka = false
 eureka.client.fetchRegistry = false
 server.port = 8761
@@ -54,6 +62,8 @@ step4:
 
 Step to add the enable eureka client in micro service
 example:
+
+
 apsrts-service
 =============
 4.1 add below dependencies in pom.xml file
@@ -64,7 +74,10 @@ apsrts-service
 		
 4.2: Enable eureka client by adding below annotation
      @EnableEurekaClient
-	 examplecode
+	 
+	 
+	 
+examplecode
 	 
 	 @SpringBootApplication
 @EnableEurekaClient
