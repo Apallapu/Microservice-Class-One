@@ -72,14 +72,20 @@ apsrts-service
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		
+		
+		
+		
 4.2: Enable eureka client by adding below annotation
      @EnableEurekaClient
 	 
 	 
 	 
 examplecode
-	 
-	 @SpringBootApplication
+
+
+
+
+@SpringBootApplication
 @EnableEurekaClient
 public class ApsrtcServiceApplication {
 
@@ -89,14 +95,24 @@ public class ApsrtcServiceApplication {
 
 }
 
+
+
+
+
 4.3:add below information in application.properties
 
 for connecting to eureka server add below information
+
+
+
+
 eureka.client.serviceUrl.defaultZone  = http://localhost:8761/eureka
+
+
 eureka.client.instance.preferIpAddress = true
 
 
-
+========================================================
 http://APSRTCSERVICE/create-bus-ticket is equal to below
 
 http://localhost:9191/create-bus-ticket
