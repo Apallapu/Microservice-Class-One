@@ -1,0 +1,22 @@
+server: 
+  port: ${PORT:8888}
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:Apallapu/Config-Repo.git
+          basedir: target
+          force-pull: true
+            
+         
+
+          
+
+security:
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
